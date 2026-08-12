@@ -1,5 +1,73 @@
-/* ==========================================================
-   Sabor Irresistível — style.css
-   Ainda vazio de propósito: vem na próxima etapa (item 5
-   do checklist), começando mobile-first.
-   ========================================================== */
+:root {
+  /* paleta principal */
+  --cor-fundo: #FCF0F0;        /* fundo geral das seções claras */
+  --cor-fundo-suave: #F0D8D8;  /* blobs, cards, hover leve */
+  --cor-destaque: #CC6C78;     /* botões, logo, links, itálico */
+  --cor-vinho: #9C4854;        /* faixa de CTA final, estados fortes */
+  --cor-texto: #240C00;        /* títulos */
+  --cor-texto-corpo: #6B5B58;  /* parágrafos */
+
+  /* neutros de apoio */
+  --cor-branco: #FFFFFF;
+  
+  /* fontes */
+  --fonte-script: 'Dancing Script', cursive;
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-corpo: 'Mulish', sans-serif;
+
+  /* escala de tamanho — mobile-first, com clamp() pra crescer suave até desktop
+     sem precisar de media query só pra isso */
+  --fs-xs: 0.8rem;                              /* legendas, rodapé */
+  --fs-sm: 0.9375rem;                           /* texto pequeno */
+  --fs-base: 1rem;                              /* corpo padrão */
+  --fs-md: 1.125rem;                            /* subtítulos */
+  --fs-lg: clamp(1.375rem, 4vw, 1.75rem);        /* títulos de seção */
+  --fs-xl: clamp(1.75rem, 6vw, 2.75rem);         /* headline do hero */
+  --fs-logo: clamp(1.5rem, 5vw, 2rem);           /* logo */
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--cor-texto-corpo);
+  background: var(--cor-fundo);
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-texto);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.hero__title,
+.cta-banner h2 {
+  font-size: var(--fs-xl);
+}
+
+.section-title {
+  font-size: var(--fs-lg);
+}
+
+/* palavras de destaque em itálico, tipo <em>momentos</em> no hero */
+h1 em, h2 em {
+  font-style: italic;
+  color: var(--cor-destaque);
+  font-weight: 600;
+}
+
+.logo {
+  font-family: var(--fonte-script);
+  font-size: var(--fs-logo);
+  color: var(--cor-destaque);
+}
+
+.eyebrow {
+  font-family: var(--fonte-corpo);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--cor-vinho);
+}
