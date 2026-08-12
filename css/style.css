@@ -368,10 +368,29 @@ a:focus-visible {
 
 /* ===== FOTO CIRCULAR (sobre mim) ===== */
 .about__photo img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-inline: auto;
   border: 6px solid var(--cor-branco);
   box-shadow: 0 12px 30px rgba(36, 12, 0, 0.12);
 }
 
+/* previne a foto de ser espremida pelo flex row no desktop */
+.about__photo {
+  flex-shrink: 0;
+}
+.about__content {
+  flex: 1;
+}
+
+@media (min-width: 1024px) {
+  .about__photo img {
+    width: 320px;
+    height: 320px;
+  }
+}
 /* ===== CTA BANNER ===== */
 .cta-banner h2 {
   font-size: var(--fs-lg);
