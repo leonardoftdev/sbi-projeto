@@ -77,8 +77,9 @@ a {
 .header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;   /* o logo saiu do fluxo, então só sobra o menu — jogado pra direita */
   padding-block: 1rem;
+  position: relative;          /* vira o "ponto zero" pro logo posicionado abaixo */
 }
 
 .hero__media img {
@@ -146,6 +147,16 @@ h2 em {
   font-family: var(--fonte-script);
   font-size: var(--fs-logo);
   color: var(--cor-destaque);
+}
+
+.header .logo {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  font-size: clamp(2.25rem, 8vw, 3.5rem);  
+  line-height: 1;
+  white-space: nowrap;                    
+  z-index: 2;
 }
 
 .eyebrow {
@@ -506,6 +517,12 @@ a:focus-visible {
    DESKTOP
    ============================================ */
 @media (min-width: 1024px) {
+
+  .header .logo {
+    top: 60px;
+    left: 50px;
+  }
+
   .nav-toggle { display: none; }
   .nav {
     position: static;
