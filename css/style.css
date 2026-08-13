@@ -66,6 +66,10 @@ a {
   color: inherit;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
   width: 100%;
   max-width: 1180px;
@@ -92,6 +96,7 @@ a {
   object-fit: cover;
   border-radius: 24px;
   box-shadow: 0 20px 40px rgba(36, 12, 0, 0.15);
+  height: 380px;
 }
 
 body {
@@ -111,16 +116,12 @@ h3 {
   font-weight: 600;
 }
 
+/* ===== CTA BANNER ===== */
+
 .hero__title,
 .cta-banner h2 {
   font-size: var(--fs-xl);
 }
-
-/* ===== CTA BANNER ===== */
-.cta-banner h2 {
-  font-size: var(--fs-lg);
-}
-
 .cta-banner p {
   color: var(--cor-fundo);
   opacity: 0.9;
@@ -228,25 +229,6 @@ h2 em {
   flex-direction: column;
   gap: 0.5rem;
   font-size: var(--fs-sm);
-}
-
-/* ===== CARDS (diferenciais) ===== */
-
-.differentials {
-  padding-block: 3rem;
-}
-
-.differentials__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: var(--cor-branco);
-  border-radius: 16px;
-  padding: 1.5rem;
 }
 
 /* ===== GALERIA (grade uniforme) ===== */
@@ -370,7 +352,21 @@ a:focus-visible {
 }
 
 /* ===== CARDS (diferenciais) ===== */
+.differentials {
+  padding-block: 3rem;
+}
+
+.differentials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
 .card {
+  background: var(--cor-branco);
+  border-radius: 16px;
+  padding: 1.5rem;
   box-shadow: 0 4px 16px rgba(36, 12, 0, 0.06);
   border: 1px solid var(--cor-fundo-suave);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -453,10 +449,6 @@ a:focus-visible {
   transition: transform 0.35s ease;
 }
 
-.gallery__item:hover img {
-  transform: scale(1.06);
-}
-
 .gallery__item figcaption {
   font-weight: 600;
   color: var(--cor-texto);
@@ -496,6 +488,10 @@ a:focus-visible {
    TABLET — a partir daqui, telas maiores
    ============================================ */
 @media (min-width: 700px) {
+
+  .hero__media img {
+    height: 580px;
+  }
   .differentials__grid { grid-template-columns: repeat(3, 1fr); }
 
   .gallery__grid {
