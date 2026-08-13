@@ -93,14 +93,6 @@ a {
   box-shadow: 0 20px 40px rgba(36, 12, 0, 0.15);
 }
 
-@media (min-width: 1024px) {
-  .hero__media img {
-    max-width: 460px;
-    /* no desktop pode crescer um pouco mais, já que divide espaço com o texto */
-    margin-inline: 0;
-  }
-}
-
 body {
   font-family: var(--fonte-corpo);
   font-size: var(--fs-base);
@@ -121,6 +113,21 @@ h3 {
 .hero__title,
 .cta-banner h2 {
   font-size: var(--fs-xl);
+}
+
+/* ===== CTA BANNER ===== */
+.cta-banner h2 {
+  font-size: var(--fs-lg);
+}
+
+.cta-banner p {
+  color: var(--cor-fundo);
+  opacity: 0.9;
+  margin: 0;
+}
+
+.cta-banner .btn--light:hover {
+  color: var(--cor-vinho);
 }
 
 .section-title {
@@ -263,14 +270,6 @@ h2 em {
   text-align: center;
 }
 
-.about__photo img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-inline: auto;
-}
-
 /* ===== CTA BANNER ===== */
 .cta-banner {
   background: var(--cor-vinho);
@@ -303,74 +302,6 @@ h2 em {
   font-size: var(--fs-xs);
   padding-block: 1rem;
   margin: 0;
-}
-
-/* ============================================
-   TABLET — a partir daqui, telas maiores
-   ============================================ */
-@media (min-width: 700px) {
-  .differentials__grid { grid-template-columns: repeat(3, 1fr); }
-
-  .gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: none;
-    margin-inline: 0;
-  }
-  .gallery__item {
-    grid-area: auto;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .gallery__controls { display: none; }
-
-  .footer__inner { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* ============================================
-   DESKTOP
-   ============================================ */
-@media (min-width: 1024px) {
-  .nav-toggle {
-    display: none;
-  }
-
-  .nav {
-    position: static;
-    flex-direction: row;
-    transform: none;
-    background: none;
-  }
-
-  .nav__list {
-    flex-direction: row;
-  }
-
-  .hero__inner {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .hero__content {
-    flex: 1;
-  }
-
-  .hero__media {
-    flex: 1;
-  }
-
-  .gallery__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .about__inner {
-    flex-direction: row;
-    text-align: left;
-    align-items: center;
-  }
-
-  .footer__inner {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-  }
 }
 
 /* ===== BOTÕES ===== */
@@ -540,33 +471,6 @@ a:focus-visible {
   flex: 1;
 }
 
-@media (min-width: 1024px) {
-  .about__photo img {
-    width: 320px;
-    height: 320px;
-  }
-
-  .fa-instagram,
-  .fa-whatsapp {
-    font-size: 1.3rem;
-  }
-}
-
-/* ===== CTA BANNER ===== */
-.cta-banner h2 {
-  font-size: var(--fs-lg);
-}
-
-.cta-banner p {
-  color: var(--cor-fundo);
-  opacity: 0.9;
-  margin: 0;
-}
-
-.cta-banner .btn--light:hover {
-  color: var(--cor-vinho);
-}
-
 /* ===== LOGO / EYEBROW já ficaram na etapa de tipografia,
    só reforçando o hover do logo aqui ===== */
 .logo {
@@ -575,4 +479,64 @@ a:focus-visible {
 
 .logo:hover {
   opacity: 0.8;
+}
+
+/* ============================================
+   TABLET — a partir daqui, telas maiores
+   ============================================ */
+@media (min-width: 700px) {
+  .differentials__grid { grid-template-columns: repeat(3, 1fr); }
+
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+    margin-inline: 0;
+  }
+  .gallery__item {
+    grid-area: auto;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .gallery__controls { display: none; }
+
+  .footer__inner { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================
+   DESKTOP
+   ============================================ */
+@media (min-width: 1024px) {
+  .nav-toggle { display: none; }
+  .nav {
+    position: static;
+    flex-direction: row;
+    transform: none;
+    background: none;
+  }
+  .nav__list { flex-direction: row; }
+
+  .hero__inner { flex-direction: row; align-items: center; }
+  .hero__content { flex: 1; }
+  .hero__media { flex: 1; }
+  .hero__media img {
+    max-width: 460px;
+    margin-inline: 0;
+  }
+
+  .gallery__grid { grid-template-columns: repeat(4, 1fr); }
+
+  .about__inner {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+  .about__photo img {
+    width: 320px;
+    height: 320px;
+  }
+  .fa-instagram, .fa-whatsapp {
+    font-size: 1.3rem;
+  }
+
+  .footer__inner { grid-template-columns: 2fr 1fr 1fr 1fr; }
 }
