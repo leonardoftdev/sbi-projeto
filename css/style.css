@@ -390,6 +390,10 @@ a:focus-visible {
     width: 320px;
     height: 320px;
   }
+
+  .fa-instagram, .fa-whatsapp {
+    font-size: 1.3rem;
+  }
 }
 /* ===== CTA BANNER ===== */
 .cta-banner h2 {
