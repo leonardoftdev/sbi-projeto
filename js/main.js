@@ -6,7 +6,7 @@ let contador = 0
 nextBtn.onclick = function() {
    document.querySelector("figure.is-active").classList.remove("is-active")
 
-   if (contador < 2) {
+   if (contador < 3) {
       contador++;
    } else {
       contador = 0;
@@ -14,6 +14,18 @@ nextBtn.onclick = function() {
 
    listImgs[contador].classList.add("is-active")
 
+}
+
+prevBtn.onclick = function() {
+   document.querySelector("figure.is-active").classList.remove("is-active")
+
+   if (contador > 0) {
+      contador--;
+   } else {
+      contador = 3
+   }
+
+   listImgs[contador].classList.add("is-active")
 }
 
 
