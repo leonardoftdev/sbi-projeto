@@ -56,7 +56,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// ===== REVELAR SEÇÕES AO ROLAR =====
+// ==== REVELAR SEÇÕES AO ROLAR ====
 const revealItems = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -71,3 +71,20 @@ const revealObserver = new IntersectionObserver((entries) => {
 });
 
 revealItems.forEach((item) => revealObserver.observe(item));
+
+// === MAPA DO FOOTER ===
+
+const centro = [-23.6505, -46.5105];
+
+const map = L.map('map').setView(centro, 12);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+L.circle(centro, {
+    radius: 3000,
+    color: '#333',
+    fillColor: '#333',
+    fillOpacity: 0.15
+}).addTo(map);

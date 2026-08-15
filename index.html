@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
@@ -41,7 +42,7 @@
           <li><a href="#sobre">Sobre mim</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
-        <a href="https://wa.me/5500000000000" class="btn btn--primary nav__cta" target="_blank" rel="noopener">
+        <a href="https://wa.me/5511996209370" class="btn btn--primary nav__cta" target="_blank" rel="noopener">
           Fazer pedido
         </a>
       </nav>
@@ -63,7 +64,7 @@
             que torna cada celebração inesquecível.
           </p>
           <div class="hero__actions">
-            <a href="https://wa.me/5500000000000" class="btn btn--primary" target="_blank" rel="noopener">
+            <a href="https://wa.me/5511996209370" class="btn btn--primary" target="_blank" rel="noopener">
               Fazer um pedido
             </a>
             <a href="#bolos" class="btn btn--outline">
@@ -77,10 +78,11 @@
             <li>Feito com muito carinho</li>
           </ul>
 
-          <a href="https://instagram.com/seuusuario" class="btn btn--primary" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/sabor_irresistivel_da_taty/" class="btn btn--primary" target="_blank"
+            aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="#" class="btn btn--primary" aria-label="WhatsApp">
+          <a href="https://wa.me/5511996209370" class="btn btn--primary" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
 
@@ -184,10 +186,11 @@
             Cada bolo que faço carrego amor, cuidado e o desejo de transformar
             momentos simples em lembranças doces. 🍰✨
           </p>
-          <a href="https://instagram.com/seuusuario" class="btn btn--primary" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/sabor_irresistivel_da_taty/" class="btn btn--primary" target="_blank"
+            aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="#" class="btn btn--primary" aria-label="WhatsApp">
+          <a href="https://wa.me/5511996209370" class="btn btn--primary" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>
@@ -199,7 +202,7 @@
       <div class="container cta-banner__inner">
         <h2>Seu momento <em>especial</em> merece um bolo à altura.</h2>
         <p>Vamos criar juntos um bolo que vai encantar você e seus convidados!</p>
-        <a href="https://wa.me/5500000000000" class="btn btn--light" target="_blank" rel="noopener">
+        <a href="https://wa.me/5511996209370" class="btn btn--light" target="_blank" rel="noopener">
           Quero fazer meu pedido
         </a>
       </div>
@@ -218,7 +221,7 @@
       <div class="footer__col">
         <h3>Fale comigo</h3>
         <ul>
-          <li><a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://wa.me/5511996209370" target="_blank" rel="noopener">WhatsApp</a></li>
           <li><a href="https://www.instagram.com/sabor_irresistivel_da_taty/" target="_blank"
               rel="noopener">Instagram</a></li>
         </ul>
@@ -227,6 +230,12 @@
       <div class="footer__col">
         <h3>Atendimento</h3>
         <p>Segunda a Sábado<br>8h às 18h</p>
+      </div>
+
+      <div class="reveal">
+        <h2>Localização</h2>
+        <div id="map"></div>
+        <p>Atendo por essa região, para mais informações entre em <a class="black" href="https://www.instagram.com/sabor_irresistivel_da_taty/">contato</a></p>
       </div>
 
       <div class="footer__col footer__social">
@@ -239,7 +248,7 @@
     <p class="footer__copy">© 2026 Sabor Irresistível. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
-
 </html>
