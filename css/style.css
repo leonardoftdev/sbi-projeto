@@ -77,6 +77,48 @@ html {
   padding-inline: 1.25rem;
 }
 
+/* ===== PRELOADER ===== */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cor-fundo);
+  animation: preloader-fade 2s ease forwards;
+}
+
+.preloader__logo {
+  font-family: var(--fonte-script);
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  color: var(--cor-destaque);
+  animation: preloader-pop 0.6s ease;
+}
+
+@keyframes preloader-fade {
+  0%, 60% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@keyframes preloader-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* ===== HEADER / NAV ===== */
 .header__inner {
   display: flex;
@@ -542,6 +584,18 @@ a:focus-visible {
 
 .logo:hover {
   opacity: 0.8;
+}
+
+/* ===== REVELAR SEÇÕES AO ROLAR ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ============================================
