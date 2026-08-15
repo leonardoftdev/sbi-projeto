@@ -401,19 +401,18 @@ a:focus-visible {
   overflow: hidden;
   border-radius: 16px;
   grid-area: 1 / 1;
-  /* todos na mesma célula = empilhados */
   opacity: 0;
   transition: opacity 0.4s ease;
-  pointer-events: none;
-  /* impede clicar numa foto escondida embaixo */
+  pointer-events: none; /* impede clicar numa foto escondida embaixo */
 }
 
 /* a foto visível por padrão, e a que ganhar essa classe via JS depois */
-.gallery__item:first-child,
-.gallery__item.is-active {
+.is-active {
   opacity: 1;
   pointer-events: auto;
 }
+
+
 
 /* botões de navegação */
 .gallery__controls {
