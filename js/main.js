@@ -88,3 +88,9 @@ L.circle(centro, {
     fillColor: '#333',
     fillOpacity: 0.15
 }).addTo(map);
+
+history.scrollRestoration = 'manual';
+
+window.addEventListener('pageshow', () => {
+    window.scrollTo(0, 0);
+});
